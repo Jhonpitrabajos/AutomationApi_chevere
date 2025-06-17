@@ -1,0 +1,24 @@
+package com.api_testing.models;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class ErrorResponse {
+    
+    @JsonProperty("error")
+    private String error;
+    
+    @JsonProperty("message")
+    private String message;
+    
+    // Default constructor
+    public ErrorResponse() {}
+    
+    // Getters and Setters
+    public String getError() { return error; }
+    public void setError(String error) { this.error = error; }
+    
+    public String getMessage() { return message; }
+    public void setMessage(String message) { this.message = message; }
+}

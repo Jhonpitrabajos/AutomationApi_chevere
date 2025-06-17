@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="8.27" tests="6" skipped="0" failures="0" errors="0">
+<testcase classname="System Integration Tests - Multi-Service Workflows" name="User Registration and Profile Creation Flow" time="5.994">
+<system-out><![CDATA[
+Given I clear all system data...............................................passed
+When I register a user with email "integration.user@reqres.in" and password "secure123".passed
+And I store the registration result in auth service.........................passed
+And I create a user profile using the registration data.....................passed
+Then the auth service should contain the user registration..................passed
+And the user service should contain the profile data........................passed
+And both services should have consistent user information...................passed
+]]></system-out>
+</testcase>
+<testcase classname="System Integration Tests - Multi-Service Workflows" name="Authentication Token Management and User Data Sync" time="0.029">
+<system-out><![CDATA[
+Given I clear all system data...............................................passed
+When I register system user "token.user@reqres.in" with password "token123".passed
+And I encrypt and store the authentication token............................passed
+And I use the encrypted token to create user profile data...................passed
+Then the token should be properly encrypted in storage......................passed
+And I should be able to decrypt and validate the token......................passed
+And the user profile should be linked to the encrypted token................passed
+]]></system-out>
+</testcase>
+<testcase classname="System Integration Tests - Multi-Service Workflows" name="Multi-Service Data Consistency Validation" time="0.013">
+<system-out><![CDATA[
+Given I clear all system data...............................................passed
+When I create test data in auth service for user "consistency.user@reqres.in".passed
+And I create corresponding profile data in user service.....................passed
+And I update the user information in both services..........................passed
+Then both services should maintain data consistency.........................passed
+And the data should be properly synchronized between services...............passed
+And no data corruption should occur during updates..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="System Integration Tests - Multi-Service Workflows" name="Error Handling Across Services" time="1.21">
+<system-out><![CDATA[
+Given I clear all system data...............................................passed
+When I attempt operations that will fail in auth service....................passed
+And I attempt operations that will fail in user service.....................passed
+Then the auth service should handle errors gracefully.......................passed
+And the user service should handle errors gracefully........................passed
+And no corrupted data should be stored in either service....................passed
+And the system should maintain data integrity...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="System Integration Tests - Multi-Service Workflows" name="Data Persistence and Service Integration" time="0.032">
+<system-out><![CDATA[
+Given I clear all system data...............................................passed
+When I perform a complete user workflow:....................................passed
+Then all workflow steps should complete successfully........................passed
+And data should persist correctly in both services..........................passed
+And the services should maintain referential integrity......................passed
+]]></system-out>
+</testcase>
+<testcase classname="System Integration Tests - Multi-Service Workflows" name="Service Layer Separation and Token Security" time="0.138">
+<system-out><![CDATA[
+Given I clear all system data...............................................passed
+When I register user "separation.user@reqres.in" through auth facade........passed
+And I create user profile through user facade...............................passed
+And I verify token encryption through auth data service.....................passed
+And I verify profile storage through user data service......................passed
+Then the auth facade should only handle authentication concerns.............passed
+And the user facade should only handle user management concerns.............passed
+And the data services should be properly separated..........................passed
+And token security should be maintained throughout the process..............passed
+]]></system-out>
+</testcase>
+</testsuite>

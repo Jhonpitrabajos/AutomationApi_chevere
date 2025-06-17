@@ -1,0 +1,26 @@
+[
+    {
+        "name": "John Doe",
+        "password": "Secretpassword3*",
+        "email": "john.doe@example.com",
+        "countryCode": "US",
+        "phoneNumber": "2025550123",
+        "address": "123 Main St",
+        "accountNumber": "123456789",
+        "ifscCode": "IFSC0001",
+        "branch": "Main Branch",
+        "accountType": "Savings"
+    },
+    {
+        "name": "Jane Doe",
+        "password": "Secretpassword4*",
+        "email": "jane.doe@example.com",
+        "countryCode": "US",
+        "phoneNumber": "2025550456",
+        "address": "456 Main St",
+        "accountNumber": "987654321",
+        "ifscCode": "IFSC0002",
+        "branch": "Secondary Branch",
+        "accountType": "Checking"
+    }
+]

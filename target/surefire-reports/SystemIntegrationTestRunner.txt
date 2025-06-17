@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: SystemIntegrationTestRunner
+-------------------------------------------------------------------------------
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.881 s -- in SystemIntegrationTestRunner
